@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/scala-2.10"/>
+	<classpathentry kind="src" path="src/main/scala"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/test/scala-2.10"/>
+	<classpathentry kind="src" path="src/test/scala"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/user/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/target/spark-parent_2.10-1.5.0-SNAPSHOT-tests.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/assembly/target/scala-2.10/spark-assembly-1.5.0-SNAPSHOT-hadoop2.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/bagel/target/spark-bagel_2.10-1.5.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-continuation-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-http-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-io-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-plus-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-security-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-server-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-servlet-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-util-6.1.26.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/jars/jetty-util-8.1.14.v20131031.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/core/target/spark-core_2.10-1.5.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/examples/target/spark-examples_2.10-1.5.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/external/zeromq/target/spark-streaming-zeromq_2.10-1.5.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/external/kafka/target/spark-streaming-kafka_2.10-1.5.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/tools/target/spark-tools_2.10-1.5.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/mllib/target/original-spark-mllib_2.10-1.5.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/user/nn-spark/neuralnet-spark/mllib/target/spark-mllib_2.10-1.5.0-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
