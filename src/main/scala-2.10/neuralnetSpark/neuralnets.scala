@@ -13,43 +13,44 @@ import org.apache.spark.mllib.util.MLUtils
  
 object neuralnets {
   
+  
+     
+     
      def main(args: Array[String])   { 
-      var myArray = Array.ofDim[Double](100, 60)
-      val logFile = "/home/user/workspace/cass_spark/src/main/scala-2.11/cass_spark/abc" // Should be some file on your system
+ 
       val conf = new SparkConf().setAppName("Simple Application").setMaster("local[8]")
       val sc = new SparkContext(conf)
-      var path = "/home/user/MEGA/workspace/workspace/neuralnetSpark/src/main/scala-2.10/neuralnetSpark/xor"
+      var path = "./src/main/scala-2.10/neuralnetSpark/xor"
       val xordataset =  sc.textFile(path)
       
-     val data= xordataset.map{ line => 
+      val data= xordataset.map{ line => 
        val parts = line.split(';')
        ( Vectors.dense(parts(1).split(' ').toArray.map{_.toDouble}),Vectors.dense(parts(0).toDouble))
       }
-      data.cache()
+      data.persist()
       data.foreach(println)
       println("---------------------------------->")
-      val topology = FeedForwardTopology.multiLayerPerceptron(Array[Int](2,4, 1), false)
-      val initialWeights = FeedForwardModel(topology, 23124).weights()
-       
+      
+      
+      /* A simple example for XOR training
+      */
+      //Multilayerperceptron takes an Integer array of layers, for. eg : (2,2,1) Input = 2, hidden =2, output =1 
+      val topology = FeedForwardTopology.multiLayerPerceptron(Array[Int](2,2, 1), false)
+ 
+      //FeedforwardTrainer takes topology and input and output dimensions
       val trainer = new FeedForwardTrainer(topology, 2, 1)
-      trainer.setWeights(initialWeights)
-       
-      trainer.SGDOptimizer.setNumIterations(100000).setStepSize(0.1) 
+  
+      //Though SGD converges slowly, but step size of 20 ??????? 
+      trainer.SGDOptimizer.setNumIterations(10000).setStepSize(10)
        
       val model = trainer.train(data)
+ 
       
-     
       println(model.predict(Vectors.dense(1.0, 1.0)).toString())
       println(model.predict(Vectors.dense(1.0, 0)).toString())
       println(model.predict(Vectors.dense(0, 1.0)).toString())
       println(model.predict(Vectors.dense(0, 0)).toString())
-      
-      /*
-      val logData = sc.textFile(logFile, 2).cache()
-      val numAs = logData.filter(line => line.contains("a")).count()
-      val numBs = logData.filter(line => line.contains("b")).count()
-      println("Lines with a: %s, Lines with b: %s".format(numAs, numBs))
- */
+ 
       }
      
      }
